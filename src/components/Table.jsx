@@ -20,17 +20,6 @@ class Table extends Component {
     this.setState({ currentPage: page });
   };
   handleSort = sortColumn => {
-    const storeData = [...this.state.data];
-    console.log("storedata : ", storeData);
-    const sortData = _.orderBy(
-      storeData,
-      [sortColumn.path],
-      [sortColumn.order]
-    );
-    console.log("sortData : ", sortData);
-    this.setState({ storeData: sortData, sortColumn });
-  };
-  handleSort = sortColumn => {
     const storeData = { ...this.state.sortColumn };
     const sortData = _.orderBy(
       storeData,
